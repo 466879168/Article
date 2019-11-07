@@ -59,7 +59,7 @@ function observe(obj){
     }
   }
 }
-//defineproperty
+//defineProperty
 function defineReactive(obj,key,value){
   Object.defineProperty(obj,key,{
     get(){
