@@ -11,4 +11,4 @@
 7. Math.min()  取最小值
 8. Math.sqrt()  开根号
 9. Math.pow(x,n)  计算x的n次方
-10. Math.ramdom()  获取[0,1)的随机值
+10. Math.random()  获取[0,1)的随机值
