@@ -71,3 +71,10 @@ function defineReactive(obj,key,value){
   })
 }
 ```
+
+
+![Snipaste_2019-11-20_14-59-25.png](http://ww1.sinaimg.cn/large/00611hkHly1g94ik2jp4qj30n00b11j9.jpg)  
+app.message修改数据，Vue内部是如何的监听message数据的改变  
+Object.defineProperty===监听对象属性的改变  
+当数据发生改变，Vue是如何的知道要通知那些人，那些界面发生刷新  
+发布订阅者模式

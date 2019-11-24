@@ -35,4 +35,47 @@ this.rejectedArr.push(rejectedCallBack)
 }
 }
 
-export default Promise
+export default Promise  
+
+
+
+Object.keys(obj).forEach(key=>{
+    let value=obj[key]
+
+    Object.defineProperty(obj,key,{
+        set(newValue){
+            value=newValue
+        },
+        get(){
+            return value
+        }
+    })
+})
+//发布订阅者
+class Dep{
+   constructor(){
+       //记录谁在使用data中的属性
+       this.subs=[]
+   }
+   addSub(watcher){
+    this.subs.push(watcher)
+   }
+   notify(){
+       this.subs.forEach(item=>{
+           item.upData()
+       })
+   }
+}
+
+class Watcher{
+    constructor(name){
+        this.name=name
+    }
+    upData(){
+
+    }
+}
+
+const dep=new Dep()
+const w1=new Watcher('张三')
+dep.addSub(w1)
