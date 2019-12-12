@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #color-input-red + label {
+            display: block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 2px;
+            left: 15px;
+            background: rgba(240, 84, 77, 1);;
+        }
+
+        #color-input-red:checked + label::before {
+            display: block;
+            content: "\2714";
+            text-align: center;
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<input id="color-input-red" class="chat-button-location-radio-input" type="checkbox" name="color-input-red"
+       value="#f0544d"/>
+<label for="color-input-red"></label>
+<script>
+    /**
+     * box-shadow: offset-x offset-y [blur [spread]] [color] [inset]
+     * box-shadow 属性用于向盒子添加一个或多个阴影效果。
+     offset-x：阴影的水平偏移量。正数向右偏移，负数向左偏移。
+     offset-y：阴影的垂直偏移量。正数向下偏移，负数向上偏移。
+     blur：阴影模糊度，不能取负数。
+     spread：阴影大小。正数阴影扩大（阴影大小大于盒子大小），负数阴影缩小（阴影大小小于盒子大小），0阴影与盒子同等大小。
+     inset：表示添加内阴影，默认为外阴影。
+
+
+     offset-x与offset-y设置为0代表阴影是在盒子四周，x轴越大代表阴影从盒子四周往左边偏移
+     y轴越大盒子阴影越偏下
+     blur阴影模糊半径，越大半径越大 以盒子中心为原点
+     spread 数值越大相当于盒子变大阴影还是在周围
+     inset 盒子内部的阴影 外边的阴影变没
+     */
+
+    /**去除button按钮的默认边框
+     * margin: 0;
+     padding: 0;
+     border: 1px solid transparent;  //自定义边框
+     outline: none;    //消除默认点击蓝色边框效果
+     */
+
+
+    /**
+     * 复选框CheckBox样式
+     * 默认的太难看了 有两种方法修改 1. 改变图片
+     *  width: 20px;
+     height: 20px;
+     background-color: #fff;
+     -webkit-appearance: none;
+     border: 1px solid #c9c9c9;
+     outline: none;
+     当选中的时候改变图片
+     input[type="checkbox"]:checked{
+            background: url("../images/checkbox_icon.png") no-repeat;
+        }
+     第二种方法使用label盖着input多选框
+     当选中的时候label框变化
+     */
+</script>
+</body>
+</html>
