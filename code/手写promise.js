@@ -42,3 +42,5 @@ function Promise(executor) {
         reject(e)
     }
 }
+
+
