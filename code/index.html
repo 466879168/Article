@@ -1,78 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <style>
-  #app{
-    text-indent: 2em;
-  }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
 </head>
 <body>
-<!--  <button>-->
-<!--    点击加载-->
-<!--  </button>-->
-<!--  <script>-->
-<!--    var arr=[];-->
-<!--  var btn=document.querySelector("button");-->
-<!--  btn.onclick = function() {-->
-<!--    //创建一个异步对象-->
-<!--    var xmlhttp=new XMLHttpRequest();-->
-<!--    //设置请求方式和请求地址-->
-<!--    xmlhttp.open("GET","01.php",true);-->
-<!--    //发送请求-->
-<!--    xmlhttp.send();-->
-<!--    //监听状态的变化-->
-<!--    xmlhttp.onreadystatechange = function() {-->
-<!--      if (xmlhttp.readyState === 4) {-->
-<!--        //判断请求是不是成功-->
-<!--        if (xmlhttp.status>=200 && xmlhttp.status < 300 ||xmlhttp.status === 304){-->
-<!--          console.log('接受到数据')-->
-<!--        }else {-->
-<!--          console.log("没有接收到数据")-->
-<!--        }-->
-<!--        -->
-<!--      }-->
-<!--      -->
-<!--    }-->
-<!--  }-->
+	<span disabled="disabled">
+		sfklfmklwemfckmdkmfskdl
+	</span>
 
-<!--  </script>-->
+	<script>
+	let spans=document.querySelector("span")
+	spans.onclick=function() {
+		alert("1")
+	}
+	</script>
 
 
-<div id="app">
-  汉字汉字汉字汉字汉字汉字汉字汉字汉字
-</div>
-<div>
-  汉字汉字汉字汉字汉字汉字汉字汉字汉字
-</div>
-<script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript">
-	/**
-	 * 第一步：找到北京的id
-	第二步：根据北京的id -> 找到北京公司的id
-   第三步：根据北京公司的id -> 找到北京公司的详情
-   目的：模拟链式调用、回调地狱
-	 */
-	//请求第一个API,地址在北京的公司的ID
-	$.ajax({
-		url:'https://www.easy-mock.com/mock/5a52256ad408383e0e3868d7/lagou/city',
-		success(resCity){
-			let findCityId=resCity.filter(item=>{
-				If(item.id == 'ci'){
-					return item
-				}
-			})[0].id
-			$.ajax({
-				
-			})
-			
-			
-		}
-	})
-</script>
+
+
+
+@click="
+showDetail(
+  scope.row.promotion_task_id,
+  0,
+  scope.row.promotion_task_name
+)
+"
 </body>
 </html>
