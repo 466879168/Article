@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title>
+		<style type="text/css">
+		.parent{
+			width: 400px;
+			height: 400px;
+			background: lightblue;
+			display: flex;
+			align-items: center;
+		}
+		</style>
 	</head>
 	<body>
-		<form name="a">
-		<select name="a" size="1" id=”obj”>
-		<option value="a">1</option>
-		<option value="b">2</option>
-		<option value="c">3</option>
-		</select>
-		</form>
+		<div class="parent">
+			<div class="son">
+				我是内部的元素
+			</div>
+		</div>
 		<script type="text/javascript">
-			// let myDate=new Date()
-			// myDate.valueOf()
-			let a=Date.parse("2038-01-19 11:14:07")
-			// myDate.getFullYear() 
-			// myDate.getMonth()
-			// myDate.getDate()
-			// myDate.getDay()
-			// myDate.getTime()
-			// myDate.getHours()
-			// myDate.getMinutes()
-			// myDate.setSeconds()
-			// myDate.getMilliseconds()
-			// myDate.toDateString()
-			// myDate.toLocaleDateString()
-			// myDate.toLocaleDateString()
+			let my=new Date("Wed Dec 18 2019 00:00:00 GMT+0800 (中国标准时间)")
+			console.log(my);
+			
+			console.log(my.getFullYear());
 		</script>
 	</body>
 </html>
