@@ -43,4 +43,28 @@
 						
 						
 						
-						git撤销本地所有修改（新增、删除、修改）
+						git撤销本地所有修改（新增、删除、修改）  
+						
+						
+						
+						
+						
+				router		路由跳转中   name的作用
+				
+				
+				
+				 {
+        path:'/personCenter/Message/MyQuotationDetail',
+        name:'MyQuotationDetail',
+        component: resolve => require(['../views/person_center/newCargo/myQuotationDetail.vue'],resolve),
+        meta: {
+          keepAlive: true
+        }
+      },
+			
+			
+			
+			
+			
+			
+			path: "/personCenter/Message/myQuotationDetail"
